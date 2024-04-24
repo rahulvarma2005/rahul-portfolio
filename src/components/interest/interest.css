@@ -1,0 +1,80 @@
+.Interest__container {
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.875rem;
+}
+
+.Interest__card {
+  text-align: center;
+  padding: 1.875rem;
+  border-radius: var(--border-radius);
+  background-color: var(--container-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.Interest__card:hover {
+  transform: translateY(-10px);
+}
+
+.Interest__card:nth-child(1) {
+  background-color: rgb(108, 108, 229);
+  box-shadow: 0 5px 20px 0 rgb(108, 108, 229 / 50%);
+}
+
+.Interest__card:nth-child(2) {
+  background-color: rgb(249, 215, 76);
+  box-shadow: 0 5px 20px 0 rgb(249, 215, 76 / 50%);
+}
+
+.Interest__card:nth-child(3) {
+  background-color: rgb(249, 123, 139);
+  box-shadow: 0 5px 20px 0 rgb(249, 123, 139 / 50%);
+}
+
+.Interest__img {
+  margin-bottom: 1.25rem;
+}
+
+.Interest__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.Interest__description {
+  color: #f8f9fa;
+}
+
+.Interest__card:nth-child(2) .Interest__title {
+  color: var(--title-color);
+}
+
+.Interest__card:nth-child(2) .Interest__description {
+  color: var(--title-color);
+}
+
+[data-theme="dark"] .Interest__card:nth-child(2) .Interest__title,
+[data-theme="dark"] .Interest__card:nth-child(2) .Interest__description {
+  color: var(--body-color);
+}
+
+@media screen and (max-width: 1024px) {
+  .Interest__container {
+    grid-template-columns: repeat(2, 330px);
+    justify-content: center;
+    row-gap: 1.875rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Interest__container {
+    grid-template-columns: 310px;
+    justify-content: center;
+    row-gap: 1.875rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .Interest__container {
+    grid-template-columns: 1fr;
+  }
+}
