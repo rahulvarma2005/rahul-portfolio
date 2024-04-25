@@ -1,13 +1,13 @@
 import React from 'react';
 import './About.css';
 import Image from '../../assets/avatar-4.svg';
-//import Resume from '../../assets/resume.pdf';
+import Resume from '../../assets/resume.pdf';
 import AboutBox from './AboutBox';
 
 const About = () => {
-    //const downloadResume = async () => {
-    //    window.open(Resume, '_blank');
-    //}
+    const downloadResume = async () => {
+        window.open(Resume, '_blank');
+}
 
 
     return (
@@ -15,7 +15,7 @@ const About = () => {
             <h2 className="section__title">About Me </h2>
 
             <div className="about__container grid">
-                <img src={Image} alt="" className='about__img' />
+                <img src={Image} alt="Resume" className='about__img' />
 
                 <div className="about__data grid">
                     <div className="about__info">
@@ -32,7 +32,7 @@ const About = () => {
                             <li>Python</li>
                             <li>Java</li>
                         </ul>
-                        <button className="btn">Donwload CV</button>
+                        <button className="btn" onClick={downloadResume}>Donwload CV</button>
                     </div>
                 </div>
             </div>
